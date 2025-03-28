@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %> 
+
+<% if (locals.advice) { %>
+  <h1>
+    <%= advice %>
+  </h1>
+  <% } else { %>
+    <h1> Feeling Stuck? Let These Words Be Your Jumpstart!🤟</h1>
+    <% } %>
+
+
+
+      <form action="/submit" method="POST">
+        <input type="submit" value="Generate Advice">
+      </form>
+
+<%- include("partials/footer.ejs") %>
